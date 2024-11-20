@@ -2,7 +2,7 @@
 
 ## Create user with httpasswd command
 ```bash
-tpasswd -c -B -b htpasswdall1 anand anandXXXX
+htpasswd -c -B -b htpasswdall1 anand anandXXXX
 ```
 Note:- Dont use '$' in the password
 
