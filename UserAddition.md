@@ -37,3 +37,12 @@ oc apply -f httpaswd.yaml
 ```bash
 oc login -u <newuser>
 ```
+
+
+## if we have requirement to add new user
+
+```bash
+htpasswd -c -B -b htpasswdsrikanth srikanth1 srikanth13XXX45
+```
+
+Edit the existing secret add the above content.
