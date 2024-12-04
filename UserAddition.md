@@ -45,4 +45,4 @@ oc login -u <newuser>
 htpasswd -c -B -b htpasswdsrikanth srikanth1 srikanth13XXX45
 ```
 
-Edit the existing secret add the above content.
+Edit the existing ocp/kubernetes secret and append the new user entry. 
