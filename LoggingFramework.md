@@ -8,6 +8,11 @@ oc adm policy add-cluster-role-to-user collect-application-logs system:serviceac
 oc adm policy add-cluster-role-to-user collect-infrastructure-logs system:serviceaccount:openshift-logging:logcollector
 oc adm policy add-cluster-role-to-user collect-audit-logs system:serviceaccount:openshift-logging:logcollector
 ```
+oc command to get list the service accounts
+```
+oc get sa
+```
+
 - step 4: create the secrets
 ```bash
 oc create secret generic cw-secret   --from-literal=aws_access_key_id=XXXX   --from-literal=aws_secret_access_key=XXXXXXXXXXXXXXOm   --namespace=openshift-logging
