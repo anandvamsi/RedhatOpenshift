@@ -28,4 +28,11 @@ oc label namespace quotaexample kubernetes.io/metadata=sample1
 oc label namespace quotaexample zone=west
 ```
 
+## to get the namespace name
 
+
+## create clusterresource quota
+```
+oc create clusterresourcequota testquota1 --project-label-selector=zone=us-west --hard=pods=5 -o yaml > oc-clusterQ.yaml
+oc create -f oc-clusterQ.yaml
+```
