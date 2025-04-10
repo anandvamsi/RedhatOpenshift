@@ -1,4 +1,6 @@
 # How to scale the node in OCP Manually.
+A MachineSet in OCP is like a Deployment, but for VMs (nodes) instead of pods.
+It ensures a specific number of identical worker nodes (EC2 instances in AWS) are running and part of your OpenShift cluster.
 
 ### Verify the node with using the machine sets
 ```bash
