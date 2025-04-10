@@ -14,7 +14,7 @@ poc3-b2r5x-worker-us-west-2c   1         1         1       1           33d
 ### Scale the node specifying the region 
 ```bash
 oc scale machineset poc1-b2r5x-worker-us-west-2a --replicas=2 -n openshift-machine-api
-machineset.machine.openshift.io/poc-b2r5x-worker-us-west-2a scaled
+machineset.machine.openshift.io/poc1-b2r5x-worker-us-west-2a scaled
 ```
 
 ### Wait for the process 3-5 mins --- Look for provisioned status
