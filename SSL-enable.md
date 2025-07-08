@@ -26,7 +26,7 @@ $ oc get route console -n openshift-console -o yaml
 ```bash
 Please create a complete certificate chain including
 - Domain cert
-- HDS-CA02 intermediate cert
+- Intermediate cert
 - Root CA cert
 $ cat domain.crt intermediate.crt root.crt > full-chain.crt
 
