@@ -24,6 +24,13 @@ $ oc get route console -n openshift-console -o yaml
 
 ## How to configure for ingress certificate
 ```bash
+Please create a complete certificate chain including
+- Domain cert
+- HDS-CA02 intermediate cert
+- Root CA cert
+$ cat domain.crt intermediate.crt root.crt > full-chain.crt
+
+
 oc create configmap configmap-ingress-ca --from-file=ca-bundle.crt=full-chain.crt  -n openshift-config
 configmap/configmap-ingress-ca created
 
