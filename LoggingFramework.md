@@ -8,9 +8,18 @@ oc adm policy add-cluster-role-to-user collect-application-logs system:serviceac
 oc adm policy add-cluster-role-to-user collect-infrastructure-logs system:serviceaccount:openshift-logging:logcollector
 oc adm policy add-cluster-role-to-user collect-audit-logs system:serviceaccount:openshift-logging:logcollector
 ```
-oc command to get list the service accounts
+oc command to create sa list the service accounts
 ```
-oc get sa
+oc create sa logcollector -n openshift-logging
+serviceaccount/logcollector created
+anand@PF39MdfdfKQN:~/K8s/ocp-prod/CW$ oc get sa -n openshift-logging
+NAME                       SECRETS   AGE
+builder                    1         23h
+cluster-logging-operator   1         23h
+collector                  1         5m14s
+default                    1         23h
+deployer                   1         23h
+logcollector               1         6s
 ```
 
 - step 4: create the secrets
