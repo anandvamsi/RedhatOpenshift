@@ -19,3 +19,10 @@ journalctl -u kubelet      # Kubelet logs
 journalctl -u crio         # CRI-O logs (for containers)
 journalctl -xe
 ```
+
+## OC command to get pods from single host machine
+```bash
+oc get pods --all-namespaces --field-selector spec.nodeName=worker-node-1 -o wide
+oc adm top pods
+```
+
