@@ -16,7 +16,13 @@ $ oc patch consoles.operator.openshift.io cluster \
 
 $ oc get consoles.operator.openshift.io cluster -o yaml
 
-$ oc get pods -n openshift-console
+$ 
+oc get pods -n openshift-console
+NAME                        READY   STATUS    RESTARTS   AGE
+console-5f469865f5-8sd6h    1/1     Running   0          87m
+console-5f469865f5-dtmcb    1/1     Running   0          87m
+downloads-65f56d785-fzfjw   1/1     Running   0          90m
+downloads-65f56d785-s8qps   1/1     Running   0          90m
 
 $ oc get route console -n openshift-console -o yaml
 ```
