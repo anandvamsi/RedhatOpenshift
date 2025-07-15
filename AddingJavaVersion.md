@@ -7,7 +7,8 @@ $ oc import-image ubi8/openjdk-21:1.20-3.1724181172 --from=registry.access.redha
 $ oc tag openjdk-21:1.20-3.1724181172 openjdk-21:latest
 ```
 
-## Edit the Java ImageStream on the openshift namespace, as below, by adding a new tag with the custom name. Example:
+## Openshift UI(Administrator-->Build-->ImageStream---(Search for java))
+### Edit the Java ImageStream on the openshift namespace, as below, by adding a new tag with the custom name. Example:
 ```bash
     - name: openjdk-21 <-- Display name
       annotations:
