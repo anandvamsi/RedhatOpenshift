@@ -26,3 +26,9 @@ oc get pods --all-namespaces --field-selector spec.nodeName=worker-node-1 -o wid
 oc adm top pods
 ```
 
+## Container for all the networking related commands
+```bash
+oc run netshoot --rm -i -t \
+  --image=nicolaka/netshoot \
+  --restart=Never -- bash
+```
